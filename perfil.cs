@@ -1,23 +1,23 @@
 public class Perfil
 {
-    //Adtributos de la clase
-    private int id;
-    private string nombre;
-    private string ciudad;
-    private int edad;
+    // Propiedades
+    public int id { get; set; }
+    public string? usuario { get; set; }
+    public string? ciudad { get; set; }
+    public int edad { get; set; }
 
-    //Métodos
-    //Constructor
-    public Perfil(int id, string nombre, string ciudad, int edad)
+    // Constructor
+    public Perfil(int id, string? usuario, string? ciudad, int edad)
     {
         this.id = id;
-        this.nombre = nombre;
+        this.usuario = usuario;
         this.ciudad = ciudad;
         this.edad = edad;
     }
-    //Getters y setters
-    public int id {get; set;}
-    public string nombre {get; set;}
-    public string ciudad {get; set;}
-    public int edad {get; set;}
+
+    // Métodos
+    public string Mostrar()
+    {
+        return id + " | " + usuario + " | " + ciudad + " | " + edad;
+    }
 }
